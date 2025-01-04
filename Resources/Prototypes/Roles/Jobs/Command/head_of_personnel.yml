@@ -63,7 +63,9 @@
     gloves: ClothingHandsGlovesHop
     ears: ClothingHeadsetAltCommand
     belt: BoxFolderClipboard
+    pocket1: WeaponPistolN1984 # Gabystation
   storage:
     back:
     - Flash
     - TelescopicBaton # Goobstation
+    - MagazineMagnum # Gabystation
