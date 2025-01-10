@@ -1,0 +1,11 @@
+- type: weightedRandom
+  id: StationGoals
+  weights:
+    testGoal: 1
+    testGoal2: 1
+
+- type: stationGoal
+  id: testGoal
+
+- type: stationGoal
+  id: testGoal2
