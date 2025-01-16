@@ -197,7 +197,9 @@ public sealed partial class AdminVerbSystem
             },
             Impact = LogImpact.High,
             Message = Loc.GetString("admin-verb-text-make-blob"),
-	    };
+        };
         args.Verbs.Add(blobAntag);
+
+        // Malf IA code is not here! see SharedStationAiSystem
     }
 }
