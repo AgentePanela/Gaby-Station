@@ -10,12 +10,12 @@ public sealed partial class StationGoalComponent : Component
     /// <summary>
     /// If have a goal.
     /// </summary>
-    [DataField("haveGoal")]
-    public bool HaveGoal = false;
+    [DataField("goalId")]
+    public string GoalId = ""; //pass to ?
 
     /// <summary>
     /// Selected station goal.
     /// </summary>
-    [DataField("goal")]
-    public HashSet<EntProtoId> Goal;
+    /*[DataField("goal")]
+    public HashSet<EntProtoId> Goal;*/
 }
