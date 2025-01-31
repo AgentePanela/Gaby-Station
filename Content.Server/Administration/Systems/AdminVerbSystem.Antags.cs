@@ -224,7 +224,7 @@ public sealed partial class AdminVerbSystem
         };
         args.Verbs.Add(blobAntag);
 
-        // Malf IA code is not here! see SharedStationAiSystem
+        // Gabystation - Malf IA
         Verb malfAi = new() //todo: loc strings
         {
             Text = Loc.GetString("admin-verb-make-malf"),
@@ -232,12 +232,12 @@ public sealed partial class AdminVerbSystem
             Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Mobs/Silicon/station_ai.rsi"), "malf_icon"),
             Act = () =>
             {
-                if (HasComp<StationAiCoreComponent>(args.Target))
-                    _antag.ForceMakeAntag<MalfAiRuleComponent>(targetPlayer, "MalfAi");
+                _antag.ForceMakeAntag<MalfAiRuleComponent>(targetPlayer, "MalfAi");
             },
             Impact = LogImpact.High,
             Message = Loc.GetString("admin-verb-text-make-malf"),
         };
-        args.Verbs.Add(malfAi);
+        if (HasComp<StationAiCoreComponent>(args.Target))
+            args.Verbs.Add(malfAi);
     }
 }
